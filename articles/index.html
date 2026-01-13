@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Articles Library — Investigation & Security Resources</title>
+  <meta name="description" content="Comprehensive article library from Lynch Investigations & Countermeasures covering TSCM, surveillance techniques, fraud investigation, background checks, skip tracing, and private investigation methodology. 76 professional resources archived.">
+  <meta name="keywords" content="TSCM articles, private investigation resources, surveillance techniques, fraud investigation, background checks, skip tracing, bug detection, counter surveillance">
+  <meta name="author" content="Peter Lynch">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://lynchinvestigations.com.au/articles/">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lynchinvestigations.com.au/articles/">
+  <meta property="og:title" content="Articles Library — Investigation & Security Resources">
+  <meta property="og:description" content="76 professional articles on TSCM, surveillance, fraud investigation, and private investigation methodology.">
+  <meta property="og:image" content="https://lynchinvestigations.com.au/images/og-image.jpg">
+  <meta property="og:site_name" content="Lynch Investigations Archive">
+  <meta property="og:locale" content="en_AU">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Articles Library — Investigation & Security Resources">
+  <meta name="twitter:description" content="76 professional articles on TSCM, surveillance, fraud investigation, and private investigation methodology.">
+  <meta name="twitter:image" content="https://lynchinvestigations.com.au/images/og-image.jpg">
+  
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Lynch Investigations Articles Library",
+    "description": "Archived collection of 76 professional articles on investigation, security, and surveillance topics",
+    "numberOfItems": 76,
+    "about": [
+      {"@type": "Thing", "name": "Technical Surveillance Counter-Measures"},
+      {"@type": "Thing", "name": "Private Investigation"},
+      {"@type": "Thing", "name": "Fraud Investigation"},
+      {"@type": "Thing", "name": "Surveillance Techniques"}
+    ]
+  }
+  </script>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="../css/styles.css">
+  
+  <style>
+    .articles-nav {
+      background: var(--color-bg-secondary);
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    
+    .articles-nav__title {
+      font-family: var(--font-heading);
+      font-size: var(--text-lg);
+      color: var(--color-accent-primary);
+      margin-bottom: 1rem;
+    }
+    
+    .articles-nav__list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+      list-style: none;
+    }
+    
+    .articles-nav__link {
+      color: var(--color-text-secondary);
+      text-decoration: none;
+      font-size: var(--text-sm);
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      transition: var(--transition-fast);
+    }
+    
+    .articles-nav__link:hover {
+      color: var(--color-accent-primary);
+      background: var(--color-bg-tertiary);
+    }
+    
+    .article-category {
+      margin-bottom: 3rem;
+      scroll-margin-top: 100px;
+    }
+    
+    .article-category__header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid var(--color-border);
+    }
+    
+    .article-category__icon {
+      width: 40px;
+      height: 40px;
+      background: var(--color-bg-tertiary);
+      border: 1px solid var(--color-accent-primary);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+    }
+    
+    .article-category__title {
+      font-family: var(--font-heading);
+      font-size: var(--text-2xl);
+      color: var(--color-text-heading);
+      margin: 0;
+    }
+    
+    .article-category__count {
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+      margin-left: auto;
+    }
+    
+    .article-category__description {
+      color: var(--color-text-secondary);
+      margin-bottom: 1.5rem;
+      max-width: 800px;
+    }
+    
+    .article-list {
+      display: grid;
+      gap: 0.75rem;
+    }
+    
+    .article-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 1.25rem;
+      background: var(--color-bg-secondary);
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+      text-decoration: none;
+      transition: var(--transition-fast);
+    }
+    
+    .article-item:hover {
+      border-color: var(--color-accent-primary);
+      background: var(--color-bg-tertiary);
+      transform: translateX(4px);
+    }
+    
+    .article-item__icon {
+      color: var(--color-accent-tertiary);
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+    
+    .article-item__title {
+      color: var(--color-text-primary);
+      font-weight: 500;
+      flex-grow: 1;
+    }
+    
+    .article-item:hover .article-item__title {
+      color: var(--color-accent-primary);
+    }
+    
+    .article-item__format {
+      font-size: var(--text-xs);
+      color: var(--color-text-muted);
+      background: var(--color-bg-primary);
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    
+    .stats-bar {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      padding: 1.5rem;
+      background: var(--color-bg-secondary);
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      margin-bottom: 2rem;
+    }
+    
+    .stats-bar__item {
+      text-align: center;
+    }
+    
+    .stats-bar__number {
+      font-family: var(--font-heading);
+      font-size: var(--text-3xl);
+      color: var(--color-accent-primary);
+      font-weight: 600;
+    }
+    
+    .stats-bar__label {
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+    }
+    
+    @media (max-width: 768px) {
+      .article-category__header {
+        flex-wrap: wrap;
+      }
+      
+      .article-category__count {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 0.5rem;
+      }
+      
+      .stats-bar {
+        justify-content: space-around;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  
+  <!-- Archive Banner -->
+  <div class="archive-banner">
+    <div class="archive-banner__content">
+      <span class="archive-banner__icon">📁</span>
+      <span class="archive-banner__text">
+        <strong>Historical Archive</strong> — Lynch Investigations & Countermeasures operated 2003–2026. 
+        This content is preserved for reference purposes.
+      </span>
+    </div>
+  </div>
+  
+  <!-- Header -->
+  <header class="site-header">
+    <div class="site-header__container">
+      <a href="../index.html" class="site-header__logo">
+        <img src="../images/Lynch_Investigations.png" alt="Lynch Investigations" class="site-header__logo-img">
+      </a>
+      <nav class="main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a href="../index.html" class="main-nav__link">Home</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="../pages/about.html" class="main-nav__link">About</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="../pages/services.html" class="main-nav__link">Services</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="../pages/credentials.html" class="main-nav__link">Credentials</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="../pages/library.html" class="main-nav__link">Library</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="index.html" class="main-nav__link main-nav__link--active">Articles</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="../pages/timeline.html" class="main-nav__link">Timeline</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="../pages/contact.html" class="main-nav__link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- Main Content -->
+  <main class="main-content">
+    
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="page-header__container">
+        <h1 class="page-header__title">Articles Library</h1>
+        <p class="page-header__subtitle">
+          Professional resources on investigation, security, and surveillance methodology
+        </p>
+      </div>
+    </section>
+    
+    <!-- Introduction -->
+    <section class="content-section">
+      <p class="lead-text">
+        This archive contains 76 articles covering the breadth of investigation and security practice. 
+        The collection includes original TSCM Listening Post publications alongside curated industry 
+        resources on surveillance techniques, fraud investigation, background verification, skip tracing, 
+        and private investigation methodology.
+      </p>
+      
+      <!-- Statistics -->
+      <div class="stats-bar">
+        <div class="stats-bar__item">
+          <div class="stats-bar__number">76</div>
+          <div class="stats-bar__label">Articles</div>
+        </div>
+        <div class="stats-bar__item">
+          <div class="stats-bar__number">9</div>
+          <div class="stats-bar__label">Categories</div>
+        </div>
+        <div class="stats-bar__item">
+          <div class="stats-bar__number">4</div>
+          <div class="stats-bar__label">TSCM Originals</div>
+        </div>
+        <div class="stats-bar__item">
+          <div class="stats-bar__number">2003–2015</div>
+          <div class="stats-bar__label">Collection Period</div>
+        </div>
+      </div>
+      
+      <!-- Quick Navigation -->
+      <nav class="articles-nav">
+        <h2 class="articles-nav__title">Jump to Category</h2>
+        <ul class="articles-nav__list">
+          <li><a href="#tscm" class="articles-nav__link">TSCM & Counter-Surveillance</a></li>
+          <li><a href="#surveillance" class="articles-nav__link">Surveillance Techniques</a></li>
+          <li><a href="#fraud" class="articles-nav__link">Fraud & Financial Crime</a></li>
+          <li><a href="#background" class="articles-nav__link">Background Checks</a></li>
+          <li><a href="#skip-tracing" class="articles-nav__link">Skip Tracing & People Search</a></li>
+          <li><a href="#cyber" class="articles-nav__link">Computer & Cyber Security</a></li>
+          <li><a href="#legal" class="articles-nav__link">Legal & Regulatory</a></li>
+          <li><a href="#career" class="articles-nav__link">Career & Industry</a></li>
+          <li><a href="#fundamentals" class="articles-nav__link">PI Fundamentals</a></li>
+        </ul>
+      </nav>
+    </section>
+    
+    <!-- TSCM & Counter-Surveillance -->
+    <section class="content-section article-category" id="tscm">
+      <div class="article-category__header">
+        <div class="article-category__icon">🔒</div>
+        <h2 class="article-category__title">TSCM & Counter-Surveillance</h2>
+        <span class="article-category__count">4 articles</span>
+      </div>
+      <p class="article-category__description">
+        Original TSCM Listening Post publications by Peter Lynch covering bug detection methodology, 
+        threat assessment, and selecting professional debugging services.
+      </p>
+      <div class="article-list">
+        <a href="tscm-listening-post-warning-signs-that-indicate-you-are-bugged.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">Warning Signs That Indicate You Are Bugged</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="tscm-listening-post-choosing-your-debugging-agent.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">Choosing Your Debugging Agent</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="tscm-listening-post-the-sweep.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">The Sweep — TSCM Inspection Process</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="tscm-listening-post-tscm-threat.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">TSCM Threat Assessment</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+      </div>
+    </section>
+    
+    <!-- Surveillance Techniques -->
+    <section class="content-section article-category" id="surveillance">
+      <div class="article-category__header">
+        <div class="article-category__icon">👁️</div>
+        <h2 class="article-category__title">Surveillance Techniques</h2>
+        <span class="article-category__count">6 articles</span>
+      </div>
+      <p class="article-category__description">
+        Resources covering surveillance methodology, equipment, photography, GPS tracking, 
+        and video surveillance technology.
+      </p>
+      <div class="article-list">
+        <a href="video-surveillance-technology-a-primer.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">Video Surveillance Technology: A Primer</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="the-use-of-cctv-cameras.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">The Use of CCTV Cameras</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="gps-vehicle-tracking-useage-and-tips.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">GPS Vehicle Tracking: Usage and Tips</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="cell-phone-gps-tracking.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">Cell Phone GPS Tracking</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="ten-tips-in-better-photography.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">Ten Tips for Better Photography</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="covert-recordings-of-disciplinary-meetings-with-an-employer.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">Covert Recordings of Disciplinary Meetings</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+      </div>
+    </section>
+    
+    <!-- Fraud & Financial Crime -->
+    <section class="content-section article-category" id="fraud">
+      <div class="article-category__header">
+        <div class="article-category__icon">💰</div>
+        <h2 class="article-category__title">Fraud & Financial Crime</h2>
+        <span class="article-category__count">7 articles</span>
+      </div>
+      <p class="article-category__description">
+        Articles on fraud investigation, financial crime detection, superannuation fraud, 
+        e-commerce fraud, and strategic fraud control planning.
+      </p>
+      <div class="article-list">
+        <a href="hire-a-private-investigator-to-perform-a-fraud-investigation.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">Hire a Private Investigator for Fraud Investigation</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="strategic-control-plan-fraud-corruption.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">Strategic Control Plan for Fraud & Corruption</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="fraud-and-superannuation.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">Fraud and Superannuation</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="fraud-and-electronic-commerce.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">Fraud and Electronic Commerce</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="fraud-get-rich-quick-scams.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">Get Rich Quick Scams</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="crime-analysis-and-investigation.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">Crime Analysis and Investigation</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="crime-analysis-and-investigation-computers.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">Crime Analysis and Investigation: Computers</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+      </div>
+    </section>
+    
+    <!-- Background Checks -->
+    <section class="content-section article-category" id="background">
+      <div class="article-category__header">
+        <div class="article-category__icon">🔍</div>
+        <h2 class="article-category__title">Background Checks</h2>
+        <span class="article-category__count">6 articles</span>
+      </div>
+      <p class="article-category__description">
+        Comprehensive resources on conducting background investigations, employment verification, 
+        and understanding when and how background checks are performed.
+      </p>
+      <div class="article-list">
+        <a href="background-checks-by-francesca-black.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">Background Checks</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="seven-ways-to-get-information-for-a-background-check.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">Seven Ways to Get Information for a Background Check</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="reasons-why-background-check-is-conducted-by-chris-east.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">Reasons Why Background Checks Are Conducted</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="things-to-remember-when-running-background-check-by-chris-east.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">Things to Remember When Running Background Checks</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="wonder-why-a-hiring-company-wants-to-check-your-background.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">Why Hiring Companies Check Your Background</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="let-a-private-investigator-conduct-an-asset-search-for-you.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">Let a Private Investigator Conduct an Asset Search</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+      </div>
+    </section>
+    
+    <!-- Skip Tracing & People Search -->
+    <section class="content-section article-category" id="skip-tracing">
+      <div class="article-category__header">
+        <div class="article-category__icon">🔎</div>
+        <h2 class="article-category__title">Skip Tracing & People Search</h2>
+        <span class="article-category__count">5 articles</span>
+      </div>
+      <p class="article-category__description">
+        Articles on locating individuals, skip tracing techniques, online records research, 
+        and people search methodology.
+      </p>
+      <div class="article-list">
+        <a href="skip-tracing-what-is-it-and-how-is-it-used.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">Skip Tracing: What Is It and How Is It Used</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="how-to-skip-trace-without-pretext.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">How to Skip Trace Without Pretext</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="people-search-easier-than-ever.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">People Search: Easier Than Ever</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="find-all-sorts-of-records-online.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">Find All Sorts of Records Online</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="investigations-on-the-internet.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">Investigations on the Internet</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+      </div>
+    </section>
+    
+    <!-- Computer & Cyber Security -->
+    <section class="content-section article-category" id="cyber">
+      <div class="article-category__header">
+        <div class="article-category__icon">💻</div>
+        <h2 class="article-category__title">Computer & Cyber Security</h2>
+        <span class="article-category__count">6 articles</span>
+      </div>
+      <p class="article-category__description">
+        Resources on computer security fundamentals, virus protection, firewalls, 
+        online security, and investigation software tools.
+      </p>
+      <div class="article-list">
+        <a href="guide-to-computer-security.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">Guide to Computer Security</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="what-are-firewalls-and-why-you-should-have-one.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">What Are Firewalls and Why You Should Have One</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="fourteen-household-ways-to-protect-your-computer-from-viruses.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">Fourteen Ways to Protect Your Computer from Viruses</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="top-tips-to-protect-your-security-working-online.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">Top Tips to Protect Your Security Working Online</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="is-there-something-sinister-about-caller-id-spoofing.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">Is There Something Sinister About Caller ID Spoofing?</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="some-types-of-private-investigation-software.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">Types of Private Investigation Software</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+      </div>
+    </section>
+    
+    <!-- Legal & Regulatory -->
+    <section class="content-section article-category" id="legal">
+      <div class="article-category__header">
+        <div class="article-category__icon">⚖️</div>
+        <h2 class="article-category__title">Legal & Regulatory</h2>
+        <span class="article-category__count">6 articles</span>
+      </div>
+      <p class="article-category__description">
+        Articles covering legal considerations for investigators, regulatory frameworks, 
+        intellectual property, and working with legal professionals.
+      </p>
+      <div class="article-list">
+        <a href="the-regulation-of-investigatory-powers-act-two-thousand-ripa-for-local-government.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">RIPA: Regulation of Investigatory Powers Act</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="role-of-lawyers.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">Role of Lawyers in Investigations</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="is-my-lawyer-any-good.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">Is My Lawyer Any Good?</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="ten-ways-to-keep-legal-fees-affordable.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">Ten Ways to Keep Legal Fees Affordable</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="what-do-you-know-about-copyrights.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">What Do You Know About Copyrights?</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="illegal-immigration.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">Illegal Immigration</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+      </div>
+    </section>
+    
+    <!-- Career & Industry -->
+    <section class="content-section article-category" id="career">
+      <div class="article-category__header">
+        <div class="article-category__icon">📈</div>
+        <h2 class="article-category__title">Career & Industry</h2>
+        <span class="article-category__count">14 articles</span>
+      </div>
+      <p class="article-category__description">
+        Resources on becoming a private investigator, industry career outlook, training programs, 
+        starting an investigation business, and regional perspectives.
+      </p>
+      <div class="article-list">
+        <a href="are-you-a-potential-private-investigator.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">Are You a Potential Private Investigator?</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="private-investigation-job-outlook-and-employment.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">Private Investigation Job Outlook and Employment</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="private-investigation-jobs-today.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">Private Investigation Jobs Today</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="job-as-a-private-investigator-agency.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">Job as a Private Investigator Agency</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="business-opportunity-as-a-private-investigator.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">Business Opportunity as a Private Investigator</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="the-feasability-of-a-private-investigation-business.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">The Feasibility of a Private Investigation Business</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="choosing-a-private-investigator-school.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">Choosing a Private Investigator School</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="what-you-can-learn-from-a-private-investigation-school.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">What You Can Learn from a PI School</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="what-may-be-had-from-private-investigation-class.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">What May Be Had from Private Investigation Class</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="the-value-of-private-investigation-training.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">The Value of Private Investigation Training</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="the-enticing-world-of-private-investigation-in-southern-california.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">Private Investigation in Southern California</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="the-three-hows-of-private-investigation-in-chicago.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">The Three Hows of Private Investigation in Chicago</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="ontario-private-investigation-for-everyone-who-wants-to-make-the-shift.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">Ontario Private Investigation</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="private-investigation-in-canada-for-something-you-want-discretely-done.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">Private Investigation in Canada</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+      </div>
+    </section>
+    
+    <!-- PI Fundamentals -->
+    <section class="content-section article-category" id="fundamentals">
+      <div class="article-category__header">
+        <div class="article-category__icon">📚</div>
+        <h2 class="article-category__title">PI Fundamentals</h2>
+        <span class="article-category__count">22 articles</span>
+      </div>
+      <p class="article-category__description">
+        Core resources covering private investigation basics, hiring investigators, 
+        equipment essentials, investigation techniques, and understanding PI services.
+      </p>
+      <div class="article-list">
+        <a href="what-is-a-private-investigation.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">What Is a Private Investigation?</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="private-investigator-the-basics.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">Private Investigator: The Basics</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="private-investigators-the-fundamental-facts.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">Private Investigators: The Fundamental Facts</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="basic-private-investigation-techniques.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">Basic Private Investigation Techniques</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="the-scope-of-detective-work.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">The Scope of Detective Work</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="role-of-modern-private-detectives.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">Role of Modern Private Detectives</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="the-value-of-private-investigation.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">The Value of Private Investigation</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="private-investigation-security-is-what-they-do-best.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">Private Investigation Security</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="what-investigative-reporting-entails.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">What Investigative Reporting Entails</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="private-investigators-investigations-resources.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">Private Investigators: Investigation Resources</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="how-to-hire-a-private-investigator-by-low-jeremy.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">How to Hire a Private Investigator</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="searching-for-a-private-investigator-by-amberton-investigators.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">Searching for a Private Investigator</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="what-to-look-for-in-a-private-investigation-agency.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">What to Look for in a PI Agency</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="what-to-look-from-a-private-investigation-agency-in-huston.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">Selecting a PI Agency: Houston Perspective</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="what-a-private-investigator-can-do-for-you.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">What a Private Investigator Can Do for You</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="what-a-private-investigation-firm-can-do-for-you.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">What a PI Firm Can Do for You</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="equipment-every-private-investigator-needs-by-lorraine-weston.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">Equipment Every Private Investigator Needs</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="must-have-equipment-for-the-private-investigator-by-low-jeremy.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">Must-Have Equipment for the Private Investigator</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="more-than-a-magnifying-glass-private-investigation-equipment-today.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">More Than a Magnifying Glass: PI Equipment Today</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="beating-heart-or-cheating-heart.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">Beating Heart or Cheating Heart</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="how-to-catch-a-cheating-wife.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">Infidelity Investigation</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+        <a href="on-the-run-strike-out.pdf" class="article-item" target="_blank">
+          <span class="article-item__icon">📄</span>
+          <span class="article-item__title">On the Run: Strike Out</span>
+          <span class="article-item__format">PDF</span>
+        </a>
+      </div>
+    </section>
+    
+  </main>
+  
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="site-footer__container">
+      <div class="footer-grid">
+        <div class="footer-section">
+          <h4 class="footer-section__title">Archive Information</h4>
+          <p class="footer-section__text">
+            This website preserves the historical record of Lynch Investigations & 
+            Countermeasures Pty Ltd, which provided professional investigation and 
+            security services across Australia from 2003 to 2026.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h4 class="footer-section__title">Archive Sections</h4>
+          <ul class="footer-section__list">
+            <li><a href="../pages/about.html">About Peter Lynch</a></li>
+            <li><a href="../pages/services.html">Services</a></li>
+            <li><a href="../pages/credentials.html">Credentials</a></li>
+            <li><a href="../pages/library.html">Reference Library</a></li>
+            <li><a href="index.html">Articles</a></li>
+            <li><a href="../pages/timeline.html">Business Timeline</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4 class="footer-section__title">Key Services</h4>
+          <ul class="footer-section__list">
+            <li><a href="../services/tscm.html">TSCM</a></li>
+            <li><a href="../services/surveillance.html">Surveillance</a></li>
+            <li><a href="../services/corporate.html">Corporate Investigations</a></li>
+            <li><a href="../services/digital-forensics.html">Digital Forensics</a></li>
+            <li><a href="../services/due-diligence.html">Due Diligence</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4 class="footer-section__title">Archive Notice</h4>
+          <p class="footer-section__text">
+            Lynch Investigations & Countermeasures Pty Ltd operated from 2003 to 2026. 
+            This archive preserves the business history for reference purposes. 
+            Investigation services are no longer available.
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-bottom__text">
+          &copy; 2003–2026 Lynch Investigations & Countermeasures Pty Ltd. All rights reserved. 
+          Archive established January 2026.
+        </p>
+      </div>
+    </div>
+  </footer>
+  
+</body>
+</html>
