@@ -1,0 +1,15 @@
+# robots.txt for Lynch Investigations Archive
+# Hosted on Netlify
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://lynchinvestigations.com.au/sitemap.xml
+
+# Crawl-delay (optional, respected by some crawlers)
+Crawl-delay: 1
+
+# Block access to any admin or system directories if they exist
+Disallow: /admin/
+Disallow: /.netlify/
