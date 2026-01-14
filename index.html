@@ -70,6 +70,88 @@
   
   <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- Media Section Styles -->
+  <style>
+    .media-archive {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      border-radius: 12px;
+      padding: 2.5rem;
+      margin: 2rem 0;
+    }
+    
+    .media-archive__title {
+      color: #c9a227;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.75rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    
+    .media-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    
+    @media (max-width: 768px) {
+      .media-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    .media-item {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      padding: 1.5rem;
+      border: 1px solid rgba(201, 162, 39, 0.2);
+    }
+    
+    .media-item__label {
+      color: #c9a227;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.5rem;
+    }
+    
+    .media-item__title {
+      color: #ffffff;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .media-item__description {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+    
+    .media-item video,
+    .media-item audio {
+      width: 100%;
+      border-radius: 6px;
+    }
+    
+    .media-item video {
+      background: #000;
+      max-height: 300px;
+    }
+    
+    .media-item audio {
+      margin-top: 0.5rem;
+    }
+    
+    .media-item__meta {
+      color: rgba(255, 255, 255, 0.5);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      margin-top: 0.75rem;
+    }
+  </style>
 </head>
 <body>
   
@@ -171,6 +253,48 @@
         This archive documents the services, capabilities, and professional achievements of the 
         business over its 23-year operational history.
       </p>
+    </section>
+    
+    <!-- Media Archive Section -->
+    <section class="content-section">
+      <div class="media-archive">
+        <h2 class="media-archive__title">From the Archive</h2>
+        <div class="media-grid">
+          
+          <!-- Video -->
+          <div class="media-item">
+            <div class="media-item__label">Recovered Video</div>
+            <h3 class="media-item__title">Original Website (2011)</h3>
+            <p class="media-item__description">
+              Flash-based website introduction recovered from the Wayback Machine. 
+              This animated presentation showcased Lynch Investigations services during 
+              the business's early years.
+            </p>
+            <video controls preload="metadata" poster="images/og-image.jpg">
+              <source src="images/pjl-website-2011.mp4" type="video/mp4">
+              Your browser does not support the video element.
+            </video>
+            <div class="media-item__meta">Duration: 79 seconds · Recovered January 2026</div>
+          </div>
+          
+          <!-- Audio -->
+          <div class="media-item">
+            <div class="media-item__label">Audio Interview</div>
+            <h3 class="media-item__title">ABC Radio — Anthony Pelicano Case (2008)</h3>
+            <p class="media-item__description">
+              Peter Lynch interviewed by ABC Radio discussing the Anthony Pelicano case 
+              and illegal wiretapping in the private investigation industry. This interview 
+              highlighted the importance of ethical TSCM practices.
+            </p>
+            <audio controls preload="metadata">
+              <source src="images/abc-pelicano-interview-2008.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+            <div class="media-item__meta">ABC Radio Interview · 2008</div>
+          </div>
+          
+        </div>
+      </div>
     </section>
     
     <!-- Service Domains -->
