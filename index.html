@@ -6,27 +6,18 @@
   
   <!-- SEO Meta Tags -->
   <title>Lynch Investigations & Countermeasures — TSCM & Private Investigation Archive (2003-2026)</title>
-  <meta name="description" content="Archive of Lynch Investigations & Countermeasures Pty Ltd. 23 years of TSCM bug sweeping, counter-surveillance, private investigation, corporate investigation, digital forensics and due diligence services across Australia. Technical Surveillance Counter-Measures specialists serving NSW, Victoria and nationwide.">
-  <meta name="keywords" content="TSCM Australia, Technical Surveillance Counter-Measures, bug sweeping Australia, bug detection, counter-surveillance, private investigator NSW, private investigation Australia, corporate investigation, surveillance detection, electronic debugging, digital forensics Australia, due diligence investigation, insurance investigation, fraud investigation, counter-espionage, Peter Lynch investigator, Lynch Investigations, Adelong NSW, debugging services, spy equipment detection, corporate espionage protection">
+  <meta name="description" content="Archive of Lynch Investigations & Countermeasures Pty Ltd. 23 years of TSCM bug sweeping, counter-surveillance, private investigation, corporate investigation, digital forensics and due diligence services across Australia.">
+  <meta name="keywords" content="TSCM Australia, Technical Surveillance Counter-Measures, bug sweeping Australia, private investigator NSW, corporate investigation, digital forensics Australia, Peter Lynch investigator, Lynch Investigations, Adelong NSW">
   <meta name="author" content="Peter Lynch">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://lynchinvestigations.com.au/">
   
-  <!-- Open Graph / Facebook -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://lynchinvestigations.com.au/">
   <meta property="og:title" content="Lynch Investigations & Countermeasures — TSCM & Private Investigation Archive">
-  <meta property="og:description" content="Archive of 23 years of professional TSCM bug sweeping, counter-surveillance, private investigation and digital forensics services across Australia (2003-2026).">
+  <meta property="og:description" content="Archive of 23 years of professional TSCM, private investigation and digital forensics services across Australia (2003-2026).">
   <meta property="og:image" content="https://lynchinvestigations.com.au/images/og-image.jpg">
-  <meta property="og:site_name" content="Lynch Investigations Archive">
-  <meta property="og:locale" content="en_AU">
-  
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://lynchinvestigations.com.au/">
-  <meta name="twitter:title" content="Lynch Investigations & Countermeasures — TSCM & Private Investigation Archive">
-  <meta name="twitter:description" content="Archive of 23 years of professional TSCM bug sweeping, counter-surveillance, private investigation and digital forensics services across Australia (2003-2026).">
-  <meta name="twitter:image" content="https://lynchinvestigations.com.au/images/og-image.jpg">
   
   <!-- Geo Tags -->
   <meta name="geo.region" content="AU-NSW">
@@ -38,9 +29,8 @@
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "Lynch Investigations & Countermeasures Pty Ltd",
-    "description": "Professional TSCM (Technical Surveillance Counter-Measures), private investigation, corporate investigation, and digital forensics services across Australia.",
+    "description": "Professional TSCM, private investigation, corporate investigation, and digital forensics services across Australia.",
     "url": "https://lynchinvestigations.com.au/",
-    "logo": "https://lynchinvestigations.com.au/images/logo.png",
     "foundingDate": "2003",
     "dissolutionDate": "2026",
     "founder": {
@@ -53,13 +43,7 @@
       "addressLocality": "Adelong",
       "addressRegion": "NSW",
       "addressCountry": "AU"
-    },
-    "areaServed": {
-      "@type": "Country",
-      "name": "Australia"
-    },
-    "serviceType": ["TSCM", "Bug Sweeping", "Counter-Surveillance", "Private Investigation", "Corporate Investigation", "Digital Forensics", "Due Diligence", "Fraud Investigation"],
-    "knowsAbout": ["Technical Surveillance Counter-Measures", "Electronic Debugging", "Counter-Espionage", "Surveillance Detection"]
+    }
   }
   </script>
   
@@ -71,7 +55,7 @@
   <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css">
   
-  <!-- From the Archive Styles -->
+  <!-- Archive Showcase Styles -->
   <style>
     .archive-showcase {
       background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #0a0a0f 100%);
@@ -80,7 +64,6 @@
       margin: 2rem 0;
       border: 1px solid rgba(201, 162, 39, 0.2);
     }
-    
     .archive-showcase__title {
       color: #c9a227;
       font-family: 'Playfair Display', serif;
@@ -88,7 +71,6 @@
       margin-bottom: 0.5rem;
       text-align: center;
     }
-    
     .archive-showcase__subtitle {
       color: rgba(255, 255, 255, 0.6);
       font-size: 0.9rem;
@@ -96,50 +78,57 @@
       margin-bottom: 2rem;
     }
     
-    /* Archive Launch Button */
-    .archive-launch {
-      text-align: center;
-      padding: 2rem 0;
-    }
-    
-    .archive-launch__button {
-      background: linear-gradient(135deg, #c9a227 0%, #8b7355 100%);
-      border: none;
+    /* Small Thumbnail */
+    .site-thumbnail {
+      position: relative;
+      width: 400px;
+      max-width: 100%;
+      margin: 0 auto;
       border-radius: 8px;
-      padding: 1.25rem 2.5rem;
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
       cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 1rem;
       transition: transform 0.2s, box-shadow 0.2s;
-      box-shadow: 0 4px 20px rgba(201, 162, 39, 0.3);
     }
-    
-    .archive-launch__button:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 30px rgba(201, 162, 39, 0.5);
+    .site-thumbnail:hover {
+      transform: scale(1.03);
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6), 0 0 60px rgba(201, 162, 39, 0.2);
     }
-    
-    .archive-launch__icon {
-      font-size: 1.5rem;
-      color: #000;
+    .site-thumbnail__image {
+      width: 100%;
+      height: auto;
+      display: block;
     }
-    
-    .archive-launch__text {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.25rem;
-      color: #000;
-      font-weight: 600;
+    .site-thumbnail__play {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 70px;
+      height: 70px;
+      background: rgba(201, 162, 39, 0.9);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     }
-    
-    .archive-launch__hint {
-      color: rgba(255, 255, 255, 0.5);
-      font-size: 0.8rem;
+    .site-thumbnail__play::after {
+      content: '';
+      border-left: 22px solid #000;
+      border-top: 14px solid transparent;
+      border-bottom: 14px solid transparent;
+      margin-left: 5px;
+    }
+    .site-thumbnail__caption {
+      text-align: center;
       margin-top: 1rem;
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.85rem;
     }
     
-    /* Lightbox Styles */
-    .lightbox-overlay {
+    /* Lightbox */
+    .lightbox {
       display: none;
       position: fixed;
       top: 0;
@@ -148,56 +137,46 @@
       height: 100%;
       background: rgba(0, 0, 0, 0.95);
       z-index: 9999;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-      box-sizing: border-box;
       overflow-y: auto;
+      padding: 40px 20px;
+      box-sizing: border-box;
     }
-    
-    .lightbox-overlay.active {
-      display: flex;
+    .lightbox.active {
+      display: block;
     }
-    
-    .lightbox-content {
-      position: relative;
-      max-width: 900px;
-      width: 90%;
-      margin: auto;
+    .lightbox__inner {
+      max-width: 850px;
+      margin: 0 auto;
     }
-    
-    .lightbox-close {
-      position: absolute;
-      top: -45px;
-      right: 0;
+    .lightbox__close {
+      position: fixed;
+      top: 15px;
+      right: 25px;
       background: none;
       border: none;
       color: #c9a227;
-      font-size: 2.5rem;
+      font-size: 3rem;
       cursor: pointer;
-      padding: 5px 15px;
-      transition: color 0.2s;
+      z-index: 10000;
     }
-    
-    .lightbox-close:hover {
+    .lightbox__close:hover {
       color: #fff;
     }
     
-    .lightbox-frame {
+    /* Large Frame */
+    .lightbox__frame {
       position: relative;
       width: 100%;
       border-radius: 8px;
       overflow: hidden;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8), 0 0 100px rgba(201, 162, 39, 0.15);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
     }
-    
-    .lightbox-frame__image {
+    .lightbox__frame-image {
       width: 100%;
       height: auto;
       display: block;
     }
-    
-    .lightbox-frame__video-window {
+    .lightbox__video-window {
       position: absolute;
       top: 19%;
       right: 10%;
@@ -206,53 +185,66 @@
       border-radius: 50%;
       overflow: hidden;
       border: 3px solid #6b5a3e;
-      box-shadow: 
-        inset 0 0 30px rgba(0, 0, 0, 0.8),
-        0 0 15px rgba(0, 0, 0, 0.5);
       background: #000;
       cursor: pointer;
     }
-    
-    .lightbox-frame__video-window video {
+    .lightbox__video-window video {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
     
-    .lightbox-audio {
+    /* Audio Section */
+    .lightbox__audio {
       background: rgba(255, 255, 255, 0.05);
       border-radius: 8px;
-      padding: 1rem 1.25rem;
-      margin-top: 1rem;
+      padding: 1.25rem;
+      margin-top: 1.5rem;
       border: 1px solid rgba(201, 162, 39, 0.2);
     }
-    
-    .lightbox-audio__label {
+    .lightbox__audio-label {
       color: #c9a227;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.75rem;
-      margin-bottom: 0.75rem;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.25rem;
     }
-    
-    .lightbox-audio audio {
+    .lightbox__audio-title {
+      color: #fff;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      margin-bottom: 0.25rem;
+    }
+    .lightbox__audio-desc {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.8rem;
+      margin-bottom: 1rem;
+    }
+    .lightbox__audio audio {
       width: 100%;
-      height: 40px;
+    }
+    .lightbox__audio-meta {
+      color: rgba(255, 255, 255, 0.4);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      margin-top: 0.75rem;
+      text-align: right;
     }
     
-    .lightbox-caption {
+    /* Wayback Link */
+    .lightbox__wayback {
       text-align: center;
-      margin-top: 1rem;
-      color: rgba(255, 255, 255, 0.7);
-      font-size: 0.85rem;
+      margin-top: 1.5rem;
     }
-    
-    .lightbox-caption a {
+    .lightbox__wayback a {
       color: #c9a227;
+      font-size: 0.9rem;
       text-decoration: none;
     }
-    
-    .lightbox-caption a:hover {
+    .lightbox__wayback a:hover {
       text-decoration: underline;
+      color: #fff;
     }
   </style>
 </head>
@@ -278,12 +270,8 @@
       
       <nav class="main-nav">
         <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a href="index.html" class="main-nav__link main-nav__link--active">Home</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="pages/about.html" class="main-nav__link">About</a>
-          </li>
+          <li class="main-nav__item"><a href="index.html" class="main-nav__link main-nav__link--active">Home</a></li>
+          <li class="main-nav__item"><a href="pages/about.html" class="main-nav__link">About</a></li>
           <li class="main-nav__item">
             <a href="pages/services.html" class="main-nav__link">Services</a>
             <div class="main-nav__dropdown">
@@ -302,21 +290,11 @@
               </ul>
             </div>
           </li>
-          <li class="main-nav__item">
-            <a href="pages/credentials.html" class="main-nav__link">Credentials</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="pages/library.html" class="main-nav__link">Library</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="articles/index.html" class="main-nav__link">Articles</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="pages/timeline.html" class="main-nav__link">Timeline</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="pages/contact.html" class="main-nav__link">Contact</a>
-          </li>
+          <li class="main-nav__item"><a href="pages/credentials.html" class="main-nav__link">Credentials</a></li>
+          <li class="main-nav__item"><a href="pages/library.html" class="main-nav__link">Library</a></li>
+          <li class="main-nav__item"><a href="articles/index.html" class="main-nav__link">Articles</a></li>
+          <li class="main-nav__item"><a href="pages/timeline.html" class="main-nav__link">Timeline</a></li>
+          <li class="main-nav__item"><a href="pages/contact.html" class="main-nav__link">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -364,38 +342,28 @@
         <h2 class="archive-showcase__title">From the Archive</h2>
         <p class="archive-showcase__subtitle">The original Lynch Investigations website (c. 2006) with recovered video</p>
         
-        <!-- Launch Button -->
-        <div class="archive-launch">
-          <button class="archive-launch__button" onclick="openLightbox()">
-            <span class="archive-launch__icon">▶</span>
-            <span class="archive-launch__text">View Original Website</span>
-          </button>
-          <p class="archive-launch__hint">Opens recovered Flash animation with audio</p>
+        <!-- Small Clickable Thumbnail -->
+        <div class="site-thumbnail" onclick="openLightbox()">
+          <img src="images/site-2006-frame.png" alt="Lynch Investigations Website circa 2006" class="site-thumbnail__image">
+          <div class="site-thumbnail__play"></div>
         </div>
-        
+        <p class="site-thumbnail__caption">Click to view with video and audio</p>
       </div>
     </section>
     
     <!-- Service Domains -->
     <section class="content-section">
       <h2 class="content-section__title">Service Domains</h2>
-      <p class="mb-xl">
-        Lynch Investigations & Countermeasures provided services across eleven specialist domains:
-      </p>
+      <p class="mb-xl">Lynch Investigations & Countermeasures provided services across eleven specialist domains:</p>
       
       <div class="card-grid">
-        
-        <!-- Domain 1: TSCM -->
         <article class="domain-card">
           <div class="domain-card__header">
             <div class="domain-card__number">01</div>
             <h3 class="domain-card__title">TSCM</h3>
           </div>
           <div class="domain-card__body">
-            <p class="domain-card__description">
-              Technical Surveillance Counter-Measures — electronic sweeping, physical inspection, 
-              bug detection, and security risk management.
-            </p>
+            <p class="domain-card__description">Technical Surveillance Counter-Measures — electronic sweeping, physical inspection, bug detection, and security risk management.</p>
             <ul class="domain-card__services">
               <li>Electronic Sweeping / Bug Detection</li>
               <li>Physical Inspection</li>
@@ -409,17 +377,13 @@
           </div>
         </article>
         
-        <!-- Domain 2: Counterespionage -->
         <article class="domain-card">
           <div class="domain-card__header">
             <div class="domain-card__number">02</div>
             <h3 class="domain-card__title">Counterespionage & Business Intelligence</h3>
           </div>
           <div class="domain-card__body">
-            <p class="domain-card__description">
-              Strategic threat assessment, intelligence gathering, and espionage investigations 
-              for corporate and government clients.
-            </p>
+            <p class="domain-card__description">Strategic threat assessment, intelligence gathering, and espionage investigations for corporate and government clients.</p>
             <ul class="domain-card__services">
               <li>Threat Assessment</li>
               <li>Intelligence Gathering</li>
@@ -432,17 +396,13 @@
           </div>
         </article>
         
-        <!-- Domain 3: Surveillance -->
         <article class="domain-card">
           <div class="domain-card__header">
             <div class="domain-card__number">03</div>
             <h3 class="domain-card__title">Surveillance</h3>
           </div>
           <div class="domain-card__body">
-            <p class="domain-card__description">
-              Comprehensive surveillance services with specialist capability in rural and 
-              remote area operations.
-            </p>
+            <p class="domain-card__description">Comprehensive surveillance services with specialist capability in rural and remote area operations.</p>
             <ul class="domain-card__services">
               <li>Static Surveillance</li>
               <li>Mobile Surveillance</li>
@@ -457,17 +417,13 @@
           </div>
         </article>
         
-        <!-- Domain 4: Corporate -->
         <article class="domain-card">
           <div class="domain-card__header">
             <div class="domain-card__number">04</div>
             <h3 class="domain-card__title">Corporate Investigations</h3>
           </div>
           <div class="domain-card__body">
-            <p class="domain-card__description">
-              Corporate fraud, theft, and security breach investigations with forensic 
-              accounting capability.
-            </p>
+            <p class="domain-card__description">Corporate fraud, theft, and security breach investigations with forensic accounting capability.</p>
             <ul class="domain-card__services">
               <li>Corporate Intelligence</li>
               <li>Fraud & Theft Investigations</li>
@@ -481,17 +437,13 @@
           </div>
         </article>
         
-        <!-- Domain 5: Due Diligence -->
         <article class="domain-card">
           <div class="domain-card__header">
             <div class="domain-card__number">05</div>
             <h3 class="domain-card__title">Due Diligence</h3>
           </div>
           <div class="domain-card__body">
-            <p class="domain-card__description">
-              Corporate due diligence, background investigations, and asset searches for 
-              mergers, acquisitions, and partnerships.
-            </p>
+            <p class="domain-card__description">Corporate due diligence, background investigations, and asset searches for mergers, acquisitions, and partnerships.</p>
             <ul class="domain-card__services">
               <li>Corporate Due Diligence</li>
               <li>Background Checks</li>
@@ -504,17 +456,13 @@
           </div>
         </article>
         
-        <!-- Domain 6: Insurance -->
         <article class="domain-card">
           <div class="domain-card__header">
             <div class="domain-card__number">06</div>
             <h3 class="domain-card__title">Insurance Investigations</h3>
           </div>
           <div class="domain-card__body">
-            <p class="domain-card__description">
-              Insurance fraud and claims investigations for workers compensation, property 
-              loss, and liability matters.
-            </p>
+            <p class="domain-card__description">Insurance fraud and claims investigations for workers compensation, property loss, and liability matters.</p>
             <ul class="domain-card__services">
               <li>Workers Compensation</li>
               <li>Property Loss</li>
@@ -528,17 +476,13 @@
           </div>
         </article>
         
-        <!-- Domain 7: Private -->
         <article class="domain-card">
           <div class="domain-card__header">
             <div class="domain-card__number">07</div>
             <h3 class="domain-card__title">Private Investigations</h3>
           </div>
           <div class="domain-card__body">
-            <p class="domain-card__description">
-              Confidential investigation services for family law, custody matters, and 
-              personal concerns.
-            </p>
+            <p class="domain-card__description">Confidential investigation services for family law, custody matters, and personal concerns.</p>
             <ul class="domain-card__services">
               <li>Family Law Matters</li>
               <li>Child Custody</li>
@@ -552,17 +496,13 @@
           </div>
         </article>
         
-        <!-- Domain 8: Factual -->
         <article class="domain-card">
           <div class="domain-card__header">
             <div class="domain-card__number">08</div>
             <h3 class="domain-card__title">Factual Investigations</h3>
           </div>
           <div class="domain-card__body">
-            <p class="domain-card__description">
-              Objective factual investigations for claims management, litigation, and 
-              criminal matters.
-            </p>
+            <p class="domain-card__description">Objective factual investigations for claims management, litigation, and criminal matters.</p>
             <ul class="domain-card__services">
               <li>Criminal Matters</li>
               <li>Fraud</li>
@@ -577,17 +517,13 @@
           </div>
         </article>
         
-        <!-- Domain 9: Digital Forensics -->
         <article class="domain-card">
           <div class="domain-card__header">
             <div class="domain-card__number">09</div>
             <h3 class="domain-card__title">Digital Forensics</h3>
           </div>
           <div class="domain-card__body">
-            <p class="domain-card__description">
-              Computer and mobile device forensics, data recovery, and chain of custody 
-              evidence handling.
-            </p>
+            <p class="domain-card__description">Computer and mobile device forensics, data recovery, and chain of custody evidence handling.</p>
             <ul class="domain-card__services">
               <li>Computer Forensics</li>
               <li>Cell Phone Forensics</li>
@@ -601,16 +537,13 @@
           </div>
         </article>
         
-        <!-- Domain 10: SEO -->
         <article class="domain-card">
           <div class="domain-card__header">
             <div class="domain-card__number">10</div>
             <h3 class="domain-card__title">SEO / Internet Marketing</h3>
           </div>
           <div class="domain-card__body">
-            <p class="domain-card__description">
-              Professional search engine optimisation and internet marketing services.
-            </p>
+            <p class="domain-card__description">Professional search engine optimisation and internet marketing services.</p>
             <ul class="domain-card__services">
               <li>Keyword Analysis</li>
               <li>Content Optimisation</li>
@@ -624,16 +557,13 @@
           </div>
         </article>
         
-        <!-- Domain 11: Products -->
         <article class="domain-card">
           <div class="domain-card__header">
             <div class="domain-card__number">11</div>
             <h3 class="domain-card__title">Product Sales</h3>
           </div>
           <div class="domain-card__body">
-            <p class="domain-card__description">
-              Investigation industry equipment and resources through the PJL Online Store.
-            </p>
+            <p class="domain-card__description">Investigation industry equipment and resources through the PJL Online Store.</p>
             <ul class="domain-card__services">
               <li>Books & Reference Materials</li>
               <li>TSCM Equipment (to 2014)</li>
@@ -646,14 +576,12 @@
             <span class="domain-card__period">2003–2015</span>
           </div>
         </article>
-        
       </div>
     </section>
     
     <!-- Featured Testimonial -->
     <section class="content-section">
       <h2 class="content-section__title">Client Testimonials</h2>
-      
       <div class="testimonial">
         <p class="testimonial__quote">
           "Expert and conscientious are two words that describe Peter Lynch's investigative 
@@ -674,7 +602,6 @@
           <span class="testimonial__quality">Good Value</span>
         </div>
       </div>
-      
       <p><a href="pages/testimonials.html">View all testimonials →</a></p>
     </section>
     
@@ -684,23 +611,17 @@
       <div class="card-grid">
         <div class="card">
           <h3 class="card__title">About Peter Lynch</h3>
-          <p class="card__description">
-            Principal investigator credentials, qualifications, and career history.
-          </p>
+          <p class="card__description">Principal investigator credentials, qualifications, and career history.</p>
           <a href="pages/about.html" class="card__link">View Profile →</a>
         </div>
         <div class="card">
           <h3 class="card__title">TSCM Articles</h3>
-          <p class="card__description">
-            Published articles on bug detection, counter-surveillance, and threat assessment.
-          </p>
+          <p class="card__description">Published articles on bug detection, counter-surveillance, and threat assessment.</p>
           <a href="articles/tscm.html" class="card__link">Read Articles →</a>
         </div>
         <div class="card">
           <h3 class="card__title">Equipment Documentation</h3>
-          <p class="card__description">
-            Technical documentation of TSCM and surveillance equipment capabilities.
-          </p>
+          <p class="card__description">Technical documentation of TSCM and surveillance equipment capabilities.</p>
           <a href="pages/equipment.html" class="card__link">View Equipment →</a>
         </div>
       </div>
@@ -712,7 +633,6 @@
   <footer class="site-footer">
     <div class="footer-container">
       <div class="footer-grid">
-        
         <div class="footer-section">
           <h4 class="footer-section__title">About This Archive</h4>
           <p class="footer-section__text">
@@ -721,7 +641,6 @@
             is no longer operating and this archive is maintained for historical reference only.
           </p>
         </div>
-        
         <div class="footer-section">
           <h4 class="footer-section__title">Service Domains</h4>
           <ul class="footer-section__list">
@@ -732,7 +651,6 @@
             <li><a href="services/digital-forensics.html">Digital Forensics</a></li>
           </ul>
         </div>
-        
         <div class="footer-section">
           <h4 class="footer-section__title">Archive</h4>
           <ul class="footer-section__list">
@@ -743,7 +661,6 @@
             <li><a href="articles/index.html">Articles</a></li>
           </ul>
         </div>
-        
         <div class="footer-section">
           <h4 class="footer-section__title">Reference</h4>
           <ul class="footer-section__list">
@@ -753,9 +670,7 @@
             <li><a href="pages/contact.html">Contact</a></li>
           </ul>
         </div>
-        
       </div>
-      
       <div class="footer-bottom">
         <p class="footer-bottom__copyright">
           © 2003–2026 Lynch Investigations & Countermeasures Pty Ltd · ABN 88 105 231 267 · Adelong, NSW
@@ -765,67 +680,70 @@
     </div>
   </footer>
   
-  <!-- Lightbox for expanded view -->
-  <div class="lightbox-overlay" id="lightbox" onclick="closeLightbox(event)">
-    <div class="lightbox-content" onclick="event.stopPropagation()">
-      <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
-      <div class="lightbox-frame">
-        <img src="images/site-2006-frame.png" alt="Lynch Investigations Website circa 2006" class="lightbox-frame__image">
-        <div class="lightbox-frame__video-window">
-          <video id="lightboxVideo" loop playsinline>
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox__close" onclick="closeLightbox()">&times;</button>
+    <div class="lightbox__inner">
+      
+      <!-- Large Website Frame with Video in Round Window -->
+      <div class="lightbox__frame">
+        <img src="images/site-2006-frame.png" alt="Lynch Investigations Website circa 2006" class="lightbox__frame-image">
+        <div class="lightbox__video-window">
+          <video id="archiveVideo" loop playsinline onclick="this.paused ? this.play() : this.pause()">
             <source src="images/pjl-website-2011.mp4" type="video/mp4">
           </video>
         </div>
       </div>
-      <div class="lightbox-audio">
-        <div class="lightbox-audio__label">ABC Radio Interview — Anthony Pelicano Case (2008)</div>
-        <audio id="lightboxAudio" controls preload="metadata">
+      
+      <!-- Audio Player -->
+      <div class="lightbox__audio">
+        <div class="lightbox__audio-label">Audio Interview</div>
+        <h3 class="lightbox__audio-title">ABC Radio — Anthony Pelicano Case</h3>
+        <p class="lightbox__audio-desc">Peter Lynch interviewed discussing illegal wiretapping in the private investigation industry and the importance of ethical TSCM practices.</p>
+        <audio id="archiveAudio" controls preload="metadata">
           <source src="images/abc-pelicano-interview-2008.mp3" type="audio/mpeg">
         </audio>
+        <div class="lightbox__audio-meta">ABC Radio · 2008</div>
       </div>
-      <p class="lightbox-caption">
-        Original website c. 2006 · 
-        <a href="https://web.archive.org/web/20120222173916/http://www.pjlinvestigations.com/" target="_blank" rel="noopener">View on Wayback Machine →</a>
-      </p>
+      
+      <!-- Wayback Machine Link -->
+      <div class="lightbox__wayback">
+        <a href="https://web.archive.org/web/20120222173916/http://www.pjlinvestigations.com/" target="_blank" rel="noopener">
+          View on Wayback Machine (Feb 2012 snapshot) →
+        </a>
+      </div>
+      
     </div>
   </div>
   
-  <!-- Lightbox Script -->
+  <!-- Script -->
   <script>
     const lightbox = document.getElementById('lightbox');
-    const lightboxVideo = document.getElementById('lightboxVideo');
-    const lightboxAudio = document.getElementById('lightboxAudio');
+    const video = document.getElementById('archiveVideo');
+    const audio = document.getElementById('archiveAudio');
     
     function openLightbox() {
       lightbox.classList.add('active');
       document.body.style.overflow = 'hidden';
-      // Auto-play video when lightbox opens
-      lightboxVideo.currentTime = 0;
-      lightboxVideo.play();
+      video.currentTime = 0;
+      video.play();
     }
     
-    function closeLightbox(event) {
-      if (event && event.target !== lightbox) return;
+    function closeLightbox() {
       lightbox.classList.remove('active');
       document.body.style.overflow = '';
-      lightboxVideo.pause();
-      lightboxAudio.pause();
+      video.pause();
+      audio.pause();
     }
     
-    // Close on Escape key
+    // Close on Escape
     document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape' && lightbox.classList.contains('active')) {
-        closeLightbox();
-      }
+      if (e.key === 'Escape') closeLightbox();
     });
     
-    // Click video to pause/play
-    lightboxVideo.addEventListener('click', function() {
-      if (this.paused) {
-        this.play();
-      } else {
-        this.pause();
-      }
+    // Close on click outside
+    lightbox.addEventListener('click', function(e) {
+      if (e.target === lightbox) closeLightbox();
     });
   </script>
   
