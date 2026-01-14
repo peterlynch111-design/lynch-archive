@@ -78,27 +78,36 @@
       margin-bottom: 1.5rem;
     }
     
-    /* View Full Size Link */
-    .archive-showcase__link {
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-    .archive-showcase__link a {
-      color: #c9a227;
-      font-size: 0.85rem;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    .archive-showcase__link a:hover {
-      color: #fff;
-      text-decoration: underline;
+    /* Frame Container */
+    .frame-container {
+      position: relative;
+      max-width: 700px;
+      margin: 0 auto;
     }
     
-    /* Small Website Frame */
+    /* Gold Link - positioned top right */
+    .frame-container__link {
+      position: absolute;
+      top: 8px;
+      right: 15px;
+      z-index: 10;
+    }
+    .frame-container__link a {
+      color: #c9a227;
+      font-size: 0.75rem;
+      text-decoration: none;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 4px 10px;
+      border-radius: 4px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .frame-container__link a:hover {
+      background: #c9a227;
+      color: #000;
+    }
+    
+    /* Large Website Frame */
     .site-frame {
-      width: 420px;
-      max-width: 100%;
-      margin: 0 auto;
       border-radius: 8px;
       overflow: hidden;
       box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
@@ -109,34 +118,71 @@
       display: block;
     }
     
+    /* Wayback Section */
+    .archive-wayback {
+      text-align: center;
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(201, 162, 39, 0.15);
+    }
+    .archive-wayback__heading {
+      color: #c9a227;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+    .archive-wayback__desc {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.85rem;
+      margin-bottom: 1rem;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .archive-wayback a {
+      color: #c9a227;
+      font-size: 0.85rem;
+      text-decoration: none;
+    }
+    .archive-wayback a:hover {
+      text-decoration: underline;
+      color: #fff;
+    }
+    
     /* Audio Section */
     .archive-audio {
-      max-width: 500px;
-      margin: 2rem auto 0;
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(201, 162, 39, 0.15);
+    }
+    .archive-audio__inner {
+      max-width: 600px;
+      margin: 0 auto;
       background: rgba(255, 255, 255, 0.03);
       border-radius: 8px;
-      padding: 1.25rem;
+      padding: 1.5rem;
       border: 1px solid rgba(201, 162, 39, 0.15);
     }
-    .archive-audio__label {
+    .archive-audio__heading {
       color: #c9a227;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 0.25rem;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      text-align: center;
     }
     .archive-audio__title {
       color: #fff;
       font-family: 'Playfair Display', serif;
-      font-size: 1.1rem;
-      margin-bottom: 0.25rem;
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      text-align: center;
     }
     .archive-audio__desc {
       color: rgba(255, 255, 255, 0.6);
-      font-size: 0.8rem;
-      margin-bottom: 1rem;
-      line-height: 1.5;
+      font-size: 0.85rem;
+      margin-bottom: 1.25rem;
+      line-height: 1.6;
+      text-align: center;
     }
     .archive-audio audio {
       width: 100%;
@@ -147,21 +193,6 @@
       font-size: 0.65rem;
       margin-top: 0.75rem;
       text-align: right;
-    }
-    
-    /* Wayback Link */
-    .archive-wayback {
-      text-align: center;
-      margin-top: 1.5rem;
-    }
-    .archive-wayback a {
-      color: #c9a227;
-      font-size: 0.8rem;
-      text-decoration: none;
-    }
-    .archive-wayback a:hover {
-      text-decoration: underline;
-      color: #fff;
     }
   </style>
 </head>
@@ -257,38 +288,44 @@
     <section class="content-section">
       <div class="archive-showcase">
         <h2 class="archive-showcase__title">From the Archive</h2>
-        <p class="archive-showcase__subtitle">The original Lynch Investigations website (c. 2006) with recovered video</p>
+        <p class="archive-showcase__subtitle">The original Lynch Investigations website (c. 2006)</p>
         
-        <!-- Gold link to full size version -->
-        <div class="archive-showcase__link">
-          <a href="services/tscm.html">View full size with video →</a>
+        <!-- Frame with gold link -->
+        <div class="frame-container">
+          <div class="frame-container__link">
+            <a href="services/tscm.html">View with video →</a>
+          </div>
+          <div class="site-frame">
+            <img src="images/site-2006-frame.png" alt="Lynch Investigations Website circa 2006">
+          </div>
         </div>
         
-        <!-- Small Website Frame -->
-        <div class="site-frame">
-          <img src="images/site-2006-frame.png" alt="Lynch Investigations Website circa 2006">
-        </div>
-        
-        <!-- Audio Player -->
-        <div class="archive-audio">
-          <div class="archive-audio__label">Audio Interview</div>
-          <h3 class="archive-audio__title">ABC Radio — Anthony Pelicano Case</h3>
-          <p class="archive-audio__desc">
-            Peter Lynch interviewed discussing illegal wiretapping in the private investigation industry 
-            and the importance of ethical TSCM practices.
-          </p>
-          <audio controls preload="metadata">
-            <source src="images/abc-pelicano-interview-2008.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-          </audio>
-          <div class="archive-audio__meta">ABC Radio · 2008</div>
-        </div>
-        
-        <!-- Wayback Machine Link -->
+        <!-- Wayback Machine Section -->
         <div class="archive-wayback">
+          <h3 class="archive-wayback__heading">Step Back in Time</h3>
+          <p class="archive-wayback__desc">
+            Explore the original Flash-based website preserved by the Internet Archive
+          </p>
           <a href="https://web.archive.org/web/20120222173916/http://www.pjlinvestigations.com/" target="_blank" rel="noopener">
             View on Wayback Machine (Feb 2012 snapshot) →
           </a>
+        </div>
+        
+        <!-- Audio Section -->
+        <div class="archive-audio">
+          <div class="archive-audio__inner">
+            <h3 class="archive-audio__heading">From the Media Archives</h3>
+            <h4 class="archive-audio__title">ABC Radio — Anthony Pelicano Case</h4>
+            <p class="archive-audio__desc">
+              Peter Lynch interviewed by ABC Radio on the Anthony Pelicano wiretapping scandal — 
+              a landmark case that exposed illegal surveillance practices in the private investigation industry.
+            </p>
+            <audio controls preload="metadata">
+              <source src="images/abc-pelicano-interview-2008.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+            <div class="archive-audio__meta">ABC Radio · 2008</div>
+          </div>
         </div>
         
       </div>
