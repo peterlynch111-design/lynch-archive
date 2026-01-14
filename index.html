@@ -88,22 +88,25 @@
     /* Gold Link - positioned top right */
     .frame-container__link {
       position: absolute;
-      top: 8px;
+      top: 10px;
       right: 15px;
       z-index: 10;
     }
     .frame-container__link a {
       color: #c9a227;
-      font-size: 0.75rem;
+      font-size: 0.85rem;
+      font-weight: 600;
       text-decoration: none;
-      background: rgba(0, 0, 0, 0.7);
-      padding: 4px 10px;
+      background: rgba(0, 0, 0, 0.8);
+      padding: 6px 14px;
       border-radius: 4px;
-      transition: background 0.2s, color 0.2s;
+      border: 1px solid rgba(201, 162, 39, 0.5);
+      transition: background 0.2s, color 0.2s, border-color 0.2s;
     }
     .frame-container__link a:hover {
       background: #c9a227;
       color: #000;
+      border-color: #c9a227;
     }
     
     /* Large Website Frame */
