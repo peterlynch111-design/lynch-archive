@@ -88,25 +88,25 @@
     /* Gold Link - positioned top right */
     .frame-container__link {
       position: absolute;
-      top: 10px;
+      top: 12px;
       right: 15px;
       z-index: 10;
     }
     .frame-container__link a {
-      color: #c9a227;
+      display: inline-block;
+      color: #000;
       font-size: 0.85rem;
       font-weight: 600;
       text-decoration: none;
-      background: rgba(0, 0, 0, 0.8);
-      padding: 6px 14px;
-      border-radius: 4px;
-      border: 1px solid rgba(201, 162, 39, 0.5);
-      transition: background 0.2s, color 0.2s, border-color 0.2s;
+      background: linear-gradient(135deg, #c9a227 0%, #a88820 100%);
+      padding: 8px 16px;
+      border-radius: 5px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
     }
     .frame-container__link a:hover {
-      background: #c9a227;
-      color: #000;
-      border-color: #c9a227;
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(201, 162, 39, 0.4);
     }
     
     /* Large Website Frame */
