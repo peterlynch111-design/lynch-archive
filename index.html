@@ -55,7 +55,7 @@
   <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css">
   
-  <!-- Archive Showcase Styles -->
+  <!-- Archive Section Styles -->
   <style>
     .archive-showcase {
       background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #0a0a0f 100%);
@@ -75,134 +75,50 @@
       color: rgba(255, 255, 255, 0.6);
       font-size: 0.9rem;
       text-align: center;
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
     }
     
-    /* Small Thumbnail */
-    .site-thumbnail {
-      position: relative;
-      width: 400px;
+    /* View Full Size Link */
+    .archive-showcase__link {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .archive-showcase__link a {
+      color: #c9a227;
+      font-size: 0.85rem;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .archive-showcase__link a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+    
+    /* Small Website Frame */
+    .site-frame {
+      width: 420px;
       max-width: 100%;
       margin: 0 auto;
       border-radius: 8px;
       overflow: hidden;
       box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-      cursor: pointer;
-      transition: transform 0.2s, box-shadow 0.2s;
     }
-    .site-thumbnail:hover {
-      transform: scale(1.03);
-      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6), 0 0 60px rgba(201, 162, 39, 0.2);
-    }
-    .site-thumbnail__image {
+    .site-frame img {
       width: 100%;
       height: auto;
       display: block;
-    }
-    .site-thumbnail__play {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 70px;
-      height: 70px;
-      background: rgba(201, 162, 39, 0.9);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-    }
-    .site-thumbnail__play::after {
-      content: '';
-      border-left: 22px solid #000;
-      border-top: 14px solid transparent;
-      border-bottom: 14px solid transparent;
-      margin-left: 5px;
-    }
-    .site-thumbnail__caption {
-      text-align: center;
-      margin-top: 1rem;
-      color: rgba(255, 255, 255, 0.6);
-      font-size: 0.85rem;
-    }
-    
-    /* Lightbox */
-    .lightbox {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.95);
-      z-index: 9999;
-      overflow-y: auto;
-      padding: 40px 20px;
-      box-sizing: border-box;
-    }
-    .lightbox.active {
-      display: block;
-    }
-    .lightbox__inner {
-      max-width: 850px;
-      margin: 0 auto;
-    }
-    .lightbox__close {
-      position: fixed;
-      top: 15px;
-      right: 25px;
-      background: none;
-      border: none;
-      color: #c9a227;
-      font-size: 3rem;
-      cursor: pointer;
-      z-index: 10000;
-    }
-    .lightbox__close:hover {
-      color: #fff;
-    }
-    
-    /* Large Frame */
-    .lightbox__frame {
-      position: relative;
-      width: 100%;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
-    }
-    .lightbox__frame-image {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    .lightbox__video-window {
-      position: absolute;
-      top: 19%;
-      right: 10%;
-      width: 23%;
-      aspect-ratio: 1;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 3px solid #6b5a3e;
-      background: #000;
-      cursor: pointer;
-    }
-    .lightbox__video-window video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
     }
     
     /* Audio Section */
-    .lightbox__audio {
-      background: rgba(255, 255, 255, 0.05);
+    .archive-audio {
+      max-width: 500px;
+      margin: 2rem auto 0;
+      background: rgba(255, 255, 255, 0.03);
       border-radius: 8px;
       padding: 1.25rem;
-      margin-top: 1.5rem;
-      border: 1px solid rgba(201, 162, 39, 0.2);
+      border: 1px solid rgba(201, 162, 39, 0.15);
     }
-    .lightbox__audio-label {
+    .archive-audio__label {
       color: #c9a227;
       font-family: 'JetBrains Mono', monospace;
       font-size: 0.7rem;
@@ -210,21 +126,22 @@
       letter-spacing: 0.1em;
       margin-bottom: 0.25rem;
     }
-    .lightbox__audio-title {
+    .archive-audio__title {
       color: #fff;
       font-family: 'Playfair Display', serif;
       font-size: 1.1rem;
       margin-bottom: 0.25rem;
     }
-    .lightbox__audio-desc {
+    .archive-audio__desc {
       color: rgba(255, 255, 255, 0.6);
       font-size: 0.8rem;
       margin-bottom: 1rem;
+      line-height: 1.5;
     }
-    .lightbox__audio audio {
+    .archive-audio audio {
       width: 100%;
     }
-    .lightbox__audio-meta {
+    .archive-audio__meta {
       color: rgba(255, 255, 255, 0.4);
       font-family: 'JetBrains Mono', monospace;
       font-size: 0.65rem;
@@ -233,16 +150,16 @@
     }
     
     /* Wayback Link */
-    .lightbox__wayback {
+    .archive-wayback {
       text-align: center;
       margin-top: 1.5rem;
     }
-    .lightbox__wayback a {
+    .archive-wayback a {
       color: #c9a227;
-      font-size: 0.9rem;
+      font-size: 0.8rem;
       text-decoration: none;
     }
-    .lightbox__wayback a:hover {
+    .archive-wayback a:hover {
       text-decoration: underline;
       color: #fff;
     }
@@ -342,12 +259,38 @@
         <h2 class="archive-showcase__title">From the Archive</h2>
         <p class="archive-showcase__subtitle">The original Lynch Investigations website (c. 2006) with recovered video</p>
         
-        <!-- Small Clickable Thumbnail -->
-        <div class="site-thumbnail" onclick="openLightbox()">
-          <img src="images/site-2006-frame.png" alt="Lynch Investigations Website circa 2006" class="site-thumbnail__image">
-          <div class="site-thumbnail__play"></div>
+        <!-- Gold link to full size version -->
+        <div class="archive-showcase__link">
+          <a href="services/tscm.html">View full size with video →</a>
         </div>
-        <p class="site-thumbnail__caption">Click to view with video and audio</p>
+        
+        <!-- Small Website Frame -->
+        <div class="site-frame">
+          <img src="images/site-2006-frame.png" alt="Lynch Investigations Website circa 2006">
+        </div>
+        
+        <!-- Audio Player -->
+        <div class="archive-audio">
+          <div class="archive-audio__label">Audio Interview</div>
+          <h3 class="archive-audio__title">ABC Radio — Anthony Pelicano Case</h3>
+          <p class="archive-audio__desc">
+            Peter Lynch interviewed discussing illegal wiretapping in the private investigation industry 
+            and the importance of ethical TSCM practices.
+          </p>
+          <audio controls preload="metadata">
+            <source src="images/abc-pelicano-interview-2008.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+          <div class="archive-audio__meta">ABC Radio · 2008</div>
+        </div>
+        
+        <!-- Wayback Machine Link -->
+        <div class="archive-wayback">
+          <a href="https://web.archive.org/web/20120222173916/http://www.pjlinvestigations.com/" target="_blank" rel="noopener">
+            View on Wayback Machine (Feb 2012 snapshot) →
+          </a>
+        </div>
+        
       </div>
     </section>
     
@@ -679,73 +622,6 @@
       </div>
     </div>
   </footer>
-  
-  <!-- LIGHTBOX -->
-  <div class="lightbox" id="lightbox">
-    <button class="lightbox__close" onclick="closeLightbox()">&times;</button>
-    <div class="lightbox__inner">
-      
-      <!-- Large Website Frame with Video in Round Window -->
-      <div class="lightbox__frame">
-        <img src="images/site-2006-frame.png" alt="Lynch Investigations Website circa 2006" class="lightbox__frame-image">
-        <div class="lightbox__video-window">
-          <video id="archiveVideo" loop playsinline onclick="this.paused ? this.play() : this.pause()">
-            <source src="images/pjl-website-2011.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-      
-      <!-- Audio Player -->
-      <div class="lightbox__audio">
-        <div class="lightbox__audio-label">Audio Interview</div>
-        <h3 class="lightbox__audio-title">ABC Radio — Anthony Pelicano Case</h3>
-        <p class="lightbox__audio-desc">Peter Lynch interviewed discussing illegal wiretapping in the private investigation industry and the importance of ethical TSCM practices.</p>
-        <audio id="archiveAudio" controls preload="metadata">
-          <source src="images/abc-pelicano-interview-2008.mp3" type="audio/mpeg">
-        </audio>
-        <div class="lightbox__audio-meta">ABC Radio · 2008</div>
-      </div>
-      
-      <!-- Wayback Machine Link -->
-      <div class="lightbox__wayback">
-        <a href="https://web.archive.org/web/20120222173916/http://www.pjlinvestigations.com/" target="_blank" rel="noopener">
-          View on Wayback Machine (Feb 2012 snapshot) →
-        </a>
-      </div>
-      
-    </div>
-  </div>
-  
-  <!-- Script -->
-  <script>
-    const lightbox = document.getElementById('lightbox');
-    const video = document.getElementById('archiveVideo');
-    const audio = document.getElementById('archiveAudio');
-    
-    function openLightbox() {
-      lightbox.classList.add('active');
-      document.body.style.overflow = 'hidden';
-      video.currentTime = 0;
-      video.play();
-    }
-    
-    function closeLightbox() {
-      lightbox.classList.remove('active');
-      document.body.style.overflow = '';
-      video.pause();
-      audio.pause();
-    }
-    
-    // Close on Escape
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') closeLightbox();
-    });
-    
-    // Close on click outside
-    lightbox.addEventListener('click', function(e) {
-      if (e.target === lightbox) closeLightbox();
-    });
-  </script>
   
 </body>
 </html>
