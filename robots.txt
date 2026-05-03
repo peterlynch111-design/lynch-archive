@@ -1,11 +1,11 @@
 # robots.txt for Lynch Investigations Archive
-# Hosted on Netlify
+# Hosted on GitHub Pages
 
 User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://lynchinvestigations.com.au/sitemap.xml
+Sitemap: https://peterlynch111-design.github.io/lynch-archive/sitemap.xml
 
 # Crawl-delay (optional, respected by some crawlers)
 Crawl-delay: 1
